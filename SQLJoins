@@ -1,0 +1,39 @@
+/*
+Lab - Introduction to SQL - Joins
+Course: Database Management
+Date: 10/25/2023
+*/
+
+
+-- 1. Show all orders that are being processed (In Process). Show the customer name and status.
+
+SELECT customerName, status
+FROM orders 
+RIGHT JOIN customers ON orders.customerNumber = customers.customerNumber
+WHERE status = "In Process";  
+
+-- 2. For all the offices, show the employee in the office. Show the office code, office city, employee's first and last name.
+
+SELECT offices.officeCode, city, firstName, lastName 
+FROM offices
+RIGHT JOIN employees ON offices.officeCode = employees.officeCode;
+
+-- 3. For each employee, find all of his/her customers. Display the employee first and last name, the customer name, the contact's first and last name.
+
+SELECT firstName, lastName, customerName, contactFirstName, contactLastName
+FROM employees
+RIGHT JOIN customers ON salesRepEmployeeNumber = employeeNumber;
+
+-- 4. Show the customers who have cancelled orders. Show the customer's name, order date, status.
+
+SELECT customerName, orderDate, status
+FROM orders 
+RIGHT JOIN customers ON orders.customerNumber = customers.customerNumber
+WHERE status = "Cancelled";
+
+-- 5. Show customers who have made a payment less that $4500. Display the customer's name and amount.
+
+SELECT customers.customerName, payments.amount 
+FROM payments
+INNER JOIN customers ON payments.customerNumber = customers.customerNumber
+WHERE payments.amount < 4500;
