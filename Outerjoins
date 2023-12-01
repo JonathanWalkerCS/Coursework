@@ -1,0 +1,48 @@
+/*
+Lab - Introduction to SQL - Outer Joins
+Course: Database Management
+Date: 10/29/2023
+*/
+
+-- 1. Perform a right join on product lines and products. Show product line, product name and buy price.
+
+SELECT products.productLine, products.productName, products.buyPrice
+FROM products
+RIGHT JOIN productlines
+ON products.productLine = productlines.productLine;
+
+-- 2. Perform a left join on offices and employees. Show office code, office city, employee's first and last name. 
+
+SELECT offices.officeCode, offices.city, employees.firstName, employees.lastName
+FROM offices
+LEFT JOIN employees
+ON offices.officeCode = employees.officeCode;
+
+-- 3. Perform a left join with employees and customers. Display employee's first and last name, customer's name.
+
+SELECT employees.firstName, employees.lastName, customers.customerName
+FROM employees
+LEFT JOIN customers
+ON employees.employeeNumber = customers.salesRepEmployeeNumber;
+
+-- 4. Are there any customers who do not have any orders? Prove with a query.
+
+Yes, there are 6 customers who do not have any orders.
+
+-- Here is my query (I included their order comments to also explain why they canceled them as well): 
+SELECT customers.customerName, orders.status, orders.comments
+FROM customers
+INNER JOIN orders 
+ON customers.customerNumber = orders.customerNumber
+WHERE status = "Cancelled"; 
+
+-- 5. Are there any employees who do not have an office? Prove with a query.
+
+/*
+No, there are not any employees who do not have an office, as all 23 have one. 
+Here is my query:
+*/
+SELECT employees.firstName, employees.lastName, employees.officeCode, employees.employeeNumber, offices.addressLine1
+FROM employees
+INNER JOIN offices 
+ON employees.officeCode = offices.officeCode;
