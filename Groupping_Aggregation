@@ -1,0 +1,11 @@
+1. List all employees. Show last name, first name. Sort in descending order by last name.
+
+2. Show the total number of offices for each country. Show the country, total offices for each country.
+
+3. What is the lowest payment ever made?
+
+4. What is the average MSRP for the products?
+
+5.  For each country that has customers, show the country and average credit limit of the customers from that country. In other words, what is the average credit limit for the customers for each country?
+
+6. For each order status, show the number of orders with that status.
