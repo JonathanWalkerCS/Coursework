@@ -1,0 +1,70 @@
+
+__________________________________________________
+
+
+1.Natural Join using Date, item_id, price name
+
+daily_menu |><| menu_item
+
+|date | item_id | price | units_sold | name | 
+
+7/27/2017 | 12947239 | 12.99 | 204 | Spaghetti
+7/27/2017 | 49273623 | 12.00 | 150 | Steak
+7/27/2017 | 40238274 | 10.60 | 276 | Eggplant parm
+7/26/2017 | 12947239 | 10.50 | 405 | Spaghetti
+7/26/2017 | 49273623 | 21.00|  70  |Steak	
+7/25/2017 | 111111 | 13.00 |  87 | 
+7/25/2017 | 371743817 |   | Mac and cheese
+7/25/2017 | 3718373 |   | Chicken
+
+__________________________________________________
+
+
+2. Left outer join using customer_id - project the name, email, date
+
+
+|customer_id | project the name | email | date |
+
+1 | Mo Farah | mo@email.com | 4/8/21 |
+2 | Michael Phelps | michael@email.com | 4/8/21| 
+3 | Simone Biles | simone@email.com | 4/8/21 | 
+
+
+Right outer join using customer_id - project the name, email, date
+
+
+|customer_id | project the name | email | date |
+
+1 | Mo Farah | mo@email.com | 4/8/21 |
+2 | Michael Phelps | michael@email.com | 4/8/21| 
+3 | Simone Biles | simone@email.com | 4/8/21 | 
+
+
+| purchase_id | customer_id | date | name | email | 
+
+2345 | 1 | 4/8/21 |  Mo Farah | mo@email.com 
+2346 | 2 | 4/8/21 | Michael Phelps | michael@email.com 
+2347| 3 | 4/8/21 | Simone Biles | simone@email.com
+__________________________________________________
+
+3. Inner join using artist_id and id - project the title, name
+
+ title | name |
+For those about to row	| AC/DC
+Balls to the wall | Accept
+
+
+Left outer join
+
+id | title | name |
+For those about to row	| AC/DC
+Balls to the wall | Accept
+
+
+Right outer join 
+
+id | name |
+For those about to row	| AC/DC
+Balls to the wall | Accept
+
+
