@@ -1,0 +1,47 @@
+/*
+Lab - Relational Table
+Course: Database Management
+Date: 09/20/2023
+Sport: Baseball
+Team: New York Yankees
+*/
+
+
+
+1.) 
+First name | last name | primary position | number | height | weight |
+Aaron | Judge | right fielder | 99 | 6,7 | 127 kg | 
+Anthony | Misiewicz | Pitcher | 54 | 6,1 | 88kg | 
+Giancarlo | Stanton | right fielder | 27 | 6,6 | 111kg |
+Gerrit | Cole | Pitcher | 45 | 6,4 | 99kg | 
+
+2.) The primary key is each player's number: 
+number |
+99 |
+54 | 
+27 |
+45 |
+
+3a.) Project only pitchers.
+
+First name | last name | primary position | number | height | weight |
+Anthony | Misiewicz | Pitcher | 54 | 6,1 | 88kg | 
+Gerrit | Cole | Pitcher | 45 | 6,4 | 99kg | 
+
+
+
+3b.) Select first names, last names and number. 
+
+First name | last name | number |
+Aaron | Judge | 99 |  
+Anthony | Misiewicz |54 | 
+Giancarlo | Stanton | 27 |
+Gerrit | Cole |  45 | 
+
+
+3c.) Select players below 6,5 then project their last name and height.
+
+last name | height |
+Misiewicz | 6,1 | 
+Cole | 6,4 | 
+
